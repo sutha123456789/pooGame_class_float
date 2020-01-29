@@ -12,22 +12,22 @@ public:
 	{}
 	void Draw(Graphics& gfx)const
 	{
-		gfx.DrawRectDim(x, y, dimention, dimention, c);
+		gfx.DrawRectDim(int(x),int( y),int( dimention), dimention, c);
 	}
 	bool TestCollision(const Dude& dude)const
 	{
 
-		const int duderight = dude.GetX() + dude.GetWidth();
-		const int dudebottom = dude.GetY() + dude.GetHeight();
-		const  int pooright = x + dimention;
-		const int poobottom = y + dimention;
+		const float duderight = dude.GetX() + dude.GetWidth();
+		const float dudebottom = dude.GetY() + dude.GetHeight();
+		const float  pooright = x + dimention;
+		const float poobottom = y + dimention;
 		return
 			duderight >= x &&
 			dude.GetX() <= pooright &&
 			dudebottom >= y &&
 			dude.GetY() <= poobottom;
 	}
-	void Respawn(int in_x, int in_y)
+	void Respawn(float in_x, float in_y)
 	{
 		x = in_x;
 		y = in_y;
@@ -62,10 +62,10 @@ public:
 	}
 
 private :
-	static constexpr int  dimention = 20;
+	static constexpr float  dimention = 20;
 	Color c = { 127,0,0 };
 	bool colorIncreasing = true;
-	int x;
-	int y;
+	float x;
+	float y;
 
 };
