@@ -14,7 +14,7 @@ public :
 private:
 	float x = 400.0f;
 	float   y = 300.0f;
-	static constexpr int speed = 1.0f;
+	static constexpr int speed = 3.0f;
 	static constexpr int width = 20.0f;
 	static constexpr int height = 20.0f;
 };

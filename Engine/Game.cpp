@@ -2253,6 +2253,7 @@ void Game::ComposeFrame()
 	if (!IsStarteg)
 	{
 		DrawTitle(388, 285);
+		circle.Draw(gfx);
 	}
 	else
 	{

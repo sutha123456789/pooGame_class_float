@@ -27,6 +27,7 @@
 #include"Dude.h"
 #include"Goal.h"
 #include"Meter.h"
+#include"Circle.h"
 #include<random>
 class Game
 {
@@ -43,7 +44,7 @@ private:
 	
 	void DrawGameOver(int x, int y);
 	void DrawTitle(int x, int y);
-	
+
 	/********************************/
 private:
 	MainWindow& wnd;
@@ -57,6 +58,7 @@ private:
 	Dude dude;
 	Goal goal;
 	Meter meter;
+	Circle circle;
 	static constexpr int nPoo = 10;
 	Poo poos[nPoo];
 	bool IsStarteg = false;
